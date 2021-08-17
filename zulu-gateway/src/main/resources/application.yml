@@ -5,13 +5,13 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: accountModule
-        uri: http://localhost:8081/
+      - id: userModule
+        uri: http://localhost:8083/
         predicates:
-        - Path=/accounts/**
-      - id: loanModule
-        uri: http://localhost:8082/
+        - Path=/users/**
+      - id: employeeModule
+        uri: http://localhost:8084/
         predicates:
-        - Path=/loans/**
+        - Path=/employees/**
 
 
